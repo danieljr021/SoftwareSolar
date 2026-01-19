@@ -36,7 +36,6 @@ Desenvolvemos uma **Lógica Hierárquica de Relevância** para classificação d
 * **Processamento Geoespacial:** Geopandas, Fiona, Shapely
 * **Manipulação de Dados:** Pandas
 * **Visualização:** Folium (Mapas Interativos)
-* **Ambiente de Desenvolvimento:** Google Colab
 
 ## 📊 Metodologia e Pipeline
 
@@ -53,12 +52,45 @@ O projeto segue um pipeline ETL (Extract, Transform, Load):
 
 ## 📦 Como Executar
 
-Este projeto foi otimizado para rodar no **Google Colab**.
+### Pré-requisitos
+Certifique-se de ter o Python instalado e as bibliotecas geoespaciais.
 
-1.  Clone este repositório.
-2.  Faça o upload do notebook `.ipynb` no Google Colab.
-3.  Certifique-se de ter o arquivo da base de dados (ex: `CPFL_Piratininga.gdb`) zipado ou descompactado no ambiente.
-4.  Instale as dependências necessárias:
+1.  Clone este repositório:
+    ```bash
+    git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO.git](https://github.com/SEU-USUARIO/NOME-DO-REPO.git)
+    cd NOME-DO-REPO
+    ```
 
-```python
-!pip install geopandas fiona folium
+2.  Instale as dependências:
+    ```bash
+    pip install pandas geopandas folium fiona shapely
+    ```
+
+3.  Configure o caminho dos dados:
+    * Baixe a base BDGD (arquivo `.gdb` ou `.zip`) da CPFL Piratininga (ou outra distribuidora).
+    * No arquivo `.py`, verifique se a variável `caminho_gdb` aponta para o local correto do seu arquivo descompactado.
+
+4.  Execute o script:
+    ```bash
+    python nome_do_seu_script.py
+    ```
+
+5.  O resultado será um arquivo `mapa_cobertura_total.html` gerado na mesma pasta. Abra-o em qualquer navegador.
+
+
+## 🤝 Equipe Cognição Elétrica
+
+A construção deste projeto uniu engenharia de software e expertise em energia solar:
+
+* **Daniel Junior**: Engenharia de Dados, Arquitetura de Software e Desenvolvimento Python.
+* **Rose Inácio**: Especialista em Energia Solar, Ideação e Regras de Negócio.
+* **Arthur Amaral Públio de Souza**: Especialista em Mercado de Energia, Ideação e Estratégia.
+
+## 🔮 Próximos Passos (Roadmap)
+
+* [ ] Aplicação de Machine Learning para predição de saturação de rede.
+* [ ] Análise de Viabilidade Econômica cruzando dados de irradiação solar.
+* [ ] Dashboard analítico integrado (Streamlit ou Power BI).
+
+---
+*Projeto desenvolvido para o Hackathon Radix - 2025/2026*
